@@ -18,6 +18,8 @@ email: al5932@nyu.edu
 description: >- # this means to ignore newlines until "baseurl:"
   This blog keeps track of my progress in the independent study I'm doing under
   Professor Klukowska.
+baseurl: /wearables-blog
+
 
 # Build settings
 markdown: kramdown
