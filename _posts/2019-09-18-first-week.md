@@ -1,5 +1,5 @@
 ---
-title: "Week 1: Small Circuit on a Lanyard"
+title: "Wearables Week 1: Small Circuit on a Lanyard"
 ---
 I sewed LED's and a battery onto a CppCon lanyard.
 
