@@ -18,9 +18,8 @@ email: al5932@nyu.edu
 description: >- # this means to ignore newlines until "baseurl:"
   This blog keeps track of my progress in the independent study I'm doing under
   Professor Klukowska.
-baseurl: /wearables-blog
-wearables_url: &baseurl
-
+baseurl: &baseurl /wearables-blog
+wearables_url: *baseurl
 
 # Build settings
 markdown: kramdown
@@ -29,9 +28,12 @@ theme: minima
 defaults:
   -
     scope:
-    type: posts
+      type: posts
     values:
       layout: page
+
+plugins:
+ - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
