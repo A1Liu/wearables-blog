@@ -28,8 +28,3 @@ trial and error, and so I likely connected it in the wrong direction and fried t
 circuitry. That's unfortunate, and I'll have to be more careful next time, but on
 the bright side, the rest of the circuitry isn't fried!
 
-### QEMU
-
-
-
-
