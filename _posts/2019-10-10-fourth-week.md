@@ -21,6 +21,10 @@ the color that's being displayed. Here's a picture of the animal for reference!
 <img src="{{ site.wearables_url }}/assets/img/wearables/p4-stuffed-animal.jpg">
 
 My current plan is to sew the LEDs under its shirt, to reduce the risk of failure.
+Aluminum foil on the hands will make contact with conductive thread in the shirt
+to act as an input to pin 4, and the three LEDs (Red, Green, Blue) will be connected
+to pins 1, 2, and 3 respectively. The battery pack and LilyTiny will be sewn into
+the back.
 
 
 
