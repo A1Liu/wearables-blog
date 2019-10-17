@@ -13,6 +13,9 @@ power:
 
 [h2ohno]: https://learn.sparkfun.com/tutorials/h2ohno
 
+I also found [this page on power saving](http://www.gammon.com.au/power), which
+was a bit more detailed.
+
 ### Phase 1 Project Proposal
 My project will be a simple stuffed animal that can change colors when you squeeze
 it. Squeezing it twice should turn it off/on, and squeezing it once should change
