@@ -1,5 +1,5 @@
 ---
-title: "Wearables Week 4: Programming a Simple Watch"
+title: "Wearables Week 4: Project Proposal and Planning"
 ---
 I'm going to write a simple library for handling different input types on a single
 pin.
@@ -16,6 +16,11 @@ power:
 ### Phase 1 Project Proposal
 My project will be a simple stuffed animal that can change colors when you squeeze
 it. Squeezing it twice should turn it off/on, and squeezing it once should change
-the color that's being displayed.
+the color that's being displayed. Here's a picture of the animal for reference!
+
+<img src="{{ site.wearables_url }}/assets/img/wearables/p4-stuffed-animal.jpg">
+
+My current plan is to sew the LEDs under its shirt, to reduce the risk of failure.
+
 
 
