@@ -23,8 +23,10 @@ void pinMode(int pin, PinMode p) {
   }
 }
 
-PinEvent listen_for_event() {
+PinEvent listen_for_event(unsigned long wait_time = 0) {
   static bool init = false;
+  static PinMode[5] pin_modes;
+  static PinEventType[5] event_type;
 
   return PinEvent{0, PinEventType::PinDown};
 }
