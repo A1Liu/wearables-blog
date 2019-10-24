@@ -1,6 +1,5 @@
 #pragma once
-
-enum class Pin { One, Two, Three, Four, Five };
+#include <Arduino.h>
 
 enum class PinMode { Input, Output };
 
@@ -15,18 +14,8 @@ public:
       : pin_number(_number), event_type(_event_type) {}
 };
 
-void pinMode(int pin, PinMode p) {
-  if (p == PinMode::Input) {
-    pinMode(pin, INPUT);
-  } else {
-    pinMode(pin, OUTPUT);
-  }
-}
+void setup_listeners(void);
 
-PinEvent listen_for_event(unsigned long wait_time = 0) {
-  static bool init = false;
-  static PinMode[5] pin_modes;
-  static PinEventType[5] event_type;
+void pinMode(int pin, PinMode p);
 
-  return PinEvent{0, PinEventType::PinDown};
-}
+PinEvent listen_for_event(unsigned long wait_time = 0);

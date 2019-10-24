@@ -1,4 +1,3 @@
-#include <avr/sleep.h>
 #include "pins.h"
 
 void setup() {
@@ -7,10 +6,12 @@ void setup() {
 
   // disable ADC
   ADCSRA = 0;
+  listen_for_event(-1);
 }
 
 void loop() {
   // short b = analogRead(inputPin);
   // analogWrite(outputPin, b);
+
 }
 
