@@ -2,17 +2,21 @@
 #include <avr/sleep.h>
 #include <avr/wdt.h>
 
-bool listen_for_event_init = false;
 PinMode pin_modes[5];
 PinEventType event_type[5];
 
 void setup_listeners() {
   for (int i = 0; i < 5; i++) {
+    if (digitalRead(i) == HIGH) {
+      event_type[i] = PinEventType::PinUp;
+    } else {
+      event_type[i] = PinEventType::PinDown;
+    }
   }
 }
 
 void pinMode(int pin, PinMode p) {
-  if (pin < 0 || pin >= 5)
+  if (pin < 0 || pin >= 5) // TODO Should error out here
     pin = 0;
 
   if (p == PinMode::Input) {
