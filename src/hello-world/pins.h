@@ -1,15 +1,14 @@
 #pragma once
 #include <Arduino.h>
 
-enum class PinMode { Input, Output };
+enum class PinMode { Input, Output, Undefined };
 
 enum class PinEventType { PinDown, PinUp };
 
-class PinEvent {
+struct PinEvent {
   int pin_number;
   PinEventType event_type;
 
-public:
   PinEvent(int _number, PinEventType _event_type)
       : pin_number(_number), event_type(_event_type) {}
 };
