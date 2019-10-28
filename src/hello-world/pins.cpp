@@ -2,15 +2,17 @@
 #include <avr/sleep.h>
 #include <avr/wdt.h>
 
-PinMode pin_modes[5];
-PinEventType event_type[5];
+PinMode pin_modes[5] = {PinMode::Undefined, PinMode::Undefined,
+                        PinMode::Undefined, PinMode::Undefined,
+                        PinMode::Undefined};
+PinEventType pin_states[5];
 
 void setup_listeners() {
   for (int i = 0; i < 5; i++) {
     if (digitalRead(i) == HIGH) {
-      event_type[i] = PinEventType::PinUp;
+      pin_states[i] = PinEventType::PinUp;
     } else {
-      event_type[i] = PinEventType::PinDown;
+      pin_states[i] = PinEventType::PinDown;
     }
   }
 }
@@ -28,11 +30,18 @@ void pinMode(int pin, PinMode p) {
   }
 }
 
-PinEvent listen_for_event(unsigned long wait_time) {
+PinEvent listen_for_event() {
+  while (true)
+    for (int i = 0; i < 5; i++) {
+      if (pin_modes[i] == PinMode::Input) { // If it's an input pin...
 
-  set_sleep_mode(SLEEP_MODE_PWR_DOWN);
-  sleep_enable();
-  sleep_cpu();
-
-  return PinEvent{0, PinEventType::PinDown};
+        auto event_type = digitalRead(i) == HIGH ? PinEventType::PinUp
+                                                 : PinEventType::PinDown;
+        // ...and its state has changed...
+        if (event_type != pin_states[i]) {
+          pin_states[i] = event_type;     // ...Then update the pin
+          return PinEvent{i, event_type}; // states and return an event
+        }
+      }
+    }
 }

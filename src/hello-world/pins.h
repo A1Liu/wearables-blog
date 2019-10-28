@@ -17,4 +17,4 @@ void setup_listeners(void);
 
 void pinMode(int pin, PinMode p);
 
-PinEvent listen_for_event(unsigned long wait_time = 0);
+PinEvent listen_for_event();

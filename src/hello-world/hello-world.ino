@@ -6,7 +6,7 @@ void setup() {
 
   // disable ADC
   ADCSRA = 0;
-  listen_for_event(-1);
+  listen_for_event();
 }
 
 void loop() {

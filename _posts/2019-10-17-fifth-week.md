@@ -29,7 +29,27 @@ PinEvent listen_for_event();
 ```
 
 ### A Busy-waiting listener
+I first wrote a simple listener that just busy waited until a signal changed.
 
+```c++
+PinEvent listen_for_event() {
+  while (true)
+    for (int i = 0; i < 5; i++) {
+      if (pin_modes[i] == PinMode::Input) { // If it's an input pin...
+
+        auto event_type = digitalRead(i) == HIGH ? PinEventType::PinUp
+                                                 : PinEventType::PinDown;
+        // ...and its state has changed...
+        if (event_type != pin_states[i]) {
+          pin_states[i] = event_type;     // ...Then update the pin
+          return PinEvent{i, event_type}; // states and return an event
+        }
+      }
+    }
+}
+```
+
+<!--
 ### Setting up the Watchdog
 I wanted to make the listener a little better, so I decided to replace my listener
 
@@ -53,6 +73,6 @@ exit status 1
 ```
 ```
 
-
+-->
 
 
