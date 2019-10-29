@@ -24,6 +24,11 @@ void pinMode(int pin, PinMode p) {
   if (p == PinMode::Input) {
     pin_modes[pin] = PinMode::Input;
     pinMode(pin, INPUT);
+    if (digitalRead(pin) == HIGH) {
+      pin_states[pin] = PinEventType::PinUp;
+    } else {
+      pin_states[pin] = PinEventType::PinDown;
+    }
   } else {
     pin_modes[pin] = PinMode::Output;
     pinMode(pin, OUTPUT);

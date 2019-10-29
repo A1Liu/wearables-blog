@@ -7,10 +7,10 @@ enum class PinEventType { PinDown, PinUp };
 
 struct PinEvent {
   int pin_number;
-  PinEventType event_type;
+  PinEventType type;
 
-  PinEvent(int _number, PinEventType _event_type)
-      : pin_number(_number), event_type(_event_type) {}
+  PinEvent(int _number, PinEventType _type)
+      : pin_number(_number), type(_type) {}
 };
 
 void setup_listeners(void);
