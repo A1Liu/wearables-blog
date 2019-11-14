@@ -5,7 +5,9 @@
 PinMode pin_modes[5] = {PinMode::Undefined, PinMode::Undefined,
                         PinMode::Undefined, PinMode::Undefined,
                         PinMode::Undefined};
-PinEventType pin_states[5];
+PinEventType pin_states[5] = {PinEventType::PinDown, PinEventType::PinDown,
+                              PinEventType::PinDown, PinEventType::PinDown,
+                              PinEventType::PinDown};
 
 void setup_listeners() {
   for (int i = 0; i < 5; i++) {
@@ -44,8 +46,10 @@ void flipPin(int pin) {
 
   if (pin_states[pin] == PinEventType::PinUp) {
     digitalWrite(pin, HIGH);
+    pin_states[pin] = PinEventType::PinDown;
   } else {
     digitalWrite(pin, LOW);
+    pin_states[pin] = PinEventType::PinUp;
   }
 }
 
