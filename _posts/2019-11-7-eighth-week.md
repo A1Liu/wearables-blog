@@ -89,6 +89,6 @@ Things I think might be helpful for the next attempt:
    Your program should be able to assume, at least to some degree, that all the
    hardware is working correctly. When you're building this isn't true at all.
    To reduce uncertainty, and make debugging easier, use a program that has well
-   known behavior, like the `intervals.ino` program that I wrote for exactly this
-   purpose.
+   known behavior, like the [`intervals.ino`](https://github.com/A1Liu/wearables-blog/blob/master/src/intervals/intervals.ino)
+   program that I wrote for exactly this purpose.
 

@@ -12,7 +12,7 @@ I modified my CppCon lanyard to light up:
 In the process I learned a few things:
 
 1. Conductive thread should be stitched without looping back on itself, to reduce
-   the total resistance that the thread has
+   the total resistance that the thread has.
 2. Undoing mistakes is pretty time consuming, so you have to be careful the first
    time around.
 
@@ -34,7 +34,7 @@ do next. Getting input to work reliably is hard. Here's what I learned:
 ## Final Project: Android
 I modified an android plushie to light up
 
-<div class="">
+<div>
 <img src="{{ site.wearables_url }}/assets/img/wearables/p8-android-success.jpg" width="400px">
 
 <video width="320" height="240" controls>
@@ -52,3 +52,4 @@ which I'll recap below:
 3. Test continuously to prevent bugs, because the cost of mistakes is much higher
    than in software.
 4. Use a test program when building to ensure you only have to debug your hardware.
+
