@@ -31,8 +31,8 @@ do next. Getting input to work reliably is hard. Here's what I learned:
 2. Input is hard to get reliably. Unless you buy something from SparkFun, like a
    button.
 
-In the process, I wrote a library with set intervals for testing purposes. This
-library can be found at
+In the process, I wrote a program with set intervals for testing purposes. This
+program can be found at
 [https://github.com/A1Liu/wearables-blog/tree/master/src/intervals](https://github.com/A1Liu/wearables-blog/tree/master/src/intervals).
 
 ## Final Project: Android
