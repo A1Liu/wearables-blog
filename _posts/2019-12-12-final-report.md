@@ -33,7 +33,7 @@ do next. Getting input to work reliably is hard. Here's what I learned:
 
 In the process, I wrote a program with set intervals for testing purposes. This
 program can be found at
-[https://github.com/A1Liu/wearables-blog/tree/master/src/intervals](https://github.com/A1Liu/wearables-blog/tree/master/src/intervals).
+[github.com/A1Liu/wearables-blog/tree/master/src/intervals](https://github.com/A1Liu/wearables-blog/tree/master/src/intervals).
 
 ## Final Project: Android
 I modified an android plushie to light up
@@ -58,6 +58,6 @@ which I'll recap below:
 4. Use a test program when building to ensure you only have to debug your hardware.
 
 The program I wrote is at
-[https://github.com/A1Liu/wearables-blog/tree/master/src/android](https://github.com/A1Liu/wearables-blog/tree/master/src/android).
+[github.com/A1Liu/wearables-blog/tree/master/src/android](https://github.com/A1Liu/wearables-blog/tree/master/src/android).
 
 
