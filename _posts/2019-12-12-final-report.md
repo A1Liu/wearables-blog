@@ -31,6 +31,10 @@ do next. Getting input to work reliably is hard. Here's what I learned:
 2. Input is hard to get reliably. Unless you buy something from SparkFun, like a
    button.
 
+In the process, I wrote a library with set intervals for testing purposes. This
+library can be found at
+[https://github.com/A1Liu/wearables-blog/tree/master/src/intervals](https://github.com/A1Liu/wearables-blog/tree/master/src/intervals).
+
 ## Final Project: Android
 I modified an android plushie to light up
 
@@ -52,4 +56,8 @@ which I'll recap below:
 3. Test continuously to prevent bugs, because the cost of mistakes is much higher
    than in software.
 4. Use a test program when building to ensure you only have to debug your hardware.
+
+The program I wrote is at
+[https://github.com/A1Liu/wearables-blog/tree/master/src/android](https://github.com/A1Liu/wearables-blog/tree/master/src/android).
+
 
